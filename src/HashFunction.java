@@ -36,11 +36,35 @@ public class HashFunction extends Dollar {
     public void HashRemove(int key) {
 
     }
+    
+    
+    public Currency HashSearch(int key) {
+    	int arrayKey = key % 29;
+    	
+    	while(hashArray[arrayKey] != null) {
+    		
+    		if (hashArray[arrayKey].getKey() == key) {
+    			
+    			System.out.println("Found key at: " + arrayKey);
+    			return hashArray[arrayKey].getValue();
+    			
+    		}
+    			
+    			++arrayKey;
+    			arrayKey %= currentSize;
+    			
+    	}
+    	
+    	System.out.println("Did not find key");
+    	return null;
 
-
-//    public Currency HashSearch(int key) {
-//
-//    }
+    }
+    
+    public void printData() {
+    	for (int i = 0; i < hashArray.length; i++) {
+    		System.out.println(hashArray[i]);
+    	}
+    }
     public boolean isEmpty() {
         return currentSize == 0;
     }
