@@ -25,15 +25,18 @@ public class HashTable {
     }
 
     public void hashInsert(Dollar key) {
+        if (getIndex(key) != -1) {
+            System.out.println("Dollar amount $" + key+ " Already in Hash Table.");
+            return;
+        }
+
+
         int index = hashScheme(key);
         int refIndex = index;
         int count = 0;
 
         while (hashTable[index] != null) {
-            if (getDollar(key) != null) {
-                System.out.println("Dollar value $" + key + " already in table.");
-                return;
-            }
+
             count++;
             index = (refIndex + count * count) % totalBuckets;
 
@@ -44,7 +47,7 @@ public class HashTable {
         collisions += count;
     }
 
-    public Dollar getDollar(Dollar dollar) {
+    public int getIndex(Dollar dollar) {
         int index = hashScheme(dollar);
         int ogIndex = index;
         int count = 0;
@@ -53,13 +56,13 @@ public class HashTable {
 
         while (hashTable[index] != null) {
             if (hashTable[index].isEqual(dollar)) {
-                return hashTable[index];
+                return index;
             }
 
             count ++;
             index = (ogIndex + count* count) % totalBuckets;
         }
-        return null;
+        return -1;
     }
 
     public void printHashTable() {
