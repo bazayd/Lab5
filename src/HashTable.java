@@ -62,6 +62,7 @@ public class HashTable {
             count ++;
             index = (ogIndex + count* count) % totalBuckets;
         }
+        System.out.println("Invalid Data");
         return -1;
     }
 

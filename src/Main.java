@@ -39,6 +39,7 @@ public class Main {
         	hashTable.hashInsert(currencies[i]);
         }
         
+        hashTable.printHashTable();
         System.out.println("Number of Data Uploaded: ");
         System.out.println(hashTable.getCurrentSize());
         System.out.println("Load Factor: ");
