@@ -72,5 +72,17 @@ public class HashTable {
             }
         }
     }
+    
+    public int getCurrentSize() {
+    	return currentSize;
+    }
+    
+    public int getCollisions() {
+    	return collisions;
+    }
+    
+    public double getLoadFactor() {
+    	return currentSize/29;
+    }
 
 }

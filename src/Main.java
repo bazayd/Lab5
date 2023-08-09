@@ -7,13 +7,10 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-
-
-
         HashTable hashTable = new HashTable(29);
         Scanner scanner = new Scanner(System.in);
         
-        Currency[] currencies = {
+        Dollar[] currencies = {
                 new Dollar(57.12),
                 new Dollar(23.44),
                 new Dollar(87.43),
@@ -38,13 +35,16 @@ public class Main {
 
         
         //add all elements into the 
-//        for (int i = 0; i < currencies.length; i++) {
-//        	hashTable.HashInsert(currencies[i], i);
-//        }
+        for (int i = 0; i < currencies.length; i++) {
+        	hashTable.hashInsert(currencies[i]);
+        }
         
         System.out.println("Number of Data Uploaded: ");
+        System.out.println(hashTable.getCurrentSize());
         System.out.println("Load Factor: ");
+        System.out.println(hashTable.getLoadFactor());
         System.out.println("Number of Collisions: ");
+        System.out.println(hashTable.getCollisions());
         System.out.println("");
         
         
@@ -62,7 +62,7 @@ public class Main {
                 System.out.println("Enter Dolalr Object to search for: ");
                 double dollarObj = scanner.nextDouble();
                 scanner.nextLine();
-                //hashTable.HashSearch(new Dollar(dollarObj));
+                System.out.println(hashTable.getIndex(new Dollar(dollarObj)));
                 break;
             
             case 2:
