@@ -1,6 +1,6 @@
 import java.util.Currency;
 
-public class HashFunction extends Dollar {
+public class iHashFunction extends Dollar {
 
     protected HashNode[] hashArray;
     protected int currentSize;
