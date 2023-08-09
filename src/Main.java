@@ -41,6 +41,7 @@ public class Main {
 //        for (int i = 0; i < currencies.length; i++) {
 //        	hashTable.HashInsert(currencies[i], i);
 //        }
+        
         System.out.println("Number of Data Uploaded: ");
         System.out.println("Load Factor: ");
         System.out.println("Number of Collisions: ");
