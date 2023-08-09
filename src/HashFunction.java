@@ -38,13 +38,13 @@ public class HashFunction extends Dollar {
     }
     
     
-    public int HashSearch(int key) {
-    	int arrayKey = (key) % 29;
+    public int HashSearch(Dollar value) {
+    	int arrayKey = (value.getWhole()*100 + value.getFraction()) % 29;
     	
     	while(hashArray[arrayKey] != null) {
     		
-    		if (hashArray[arrayKey].getKey() == key) {
-    			
+    		if (hashArray[arrayKey].getKey() == value.getWhole()*100 + value.getFraction()) {
+    		//if (hashArray[arrayKey].getValue() == value) {
     			System.out.println("Found key at: " + arrayKey);
     			return arrayKey;
     			
