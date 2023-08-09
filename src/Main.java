@@ -48,7 +48,8 @@ public class Main {
         System.out.println(hashTable.getCollisions());
         System.out.println("");
         
-        
+//        hashTable.printHashTable();
+
         boolean end = false;
         
         while(!end) {
@@ -63,7 +64,11 @@ public class Main {
                 System.out.println("Enter Dolalr Object to search for: ");
                 double dollarObj = scanner.nextDouble();
                 scanner.nextLine();
-                System.out.println(hashTable.getIndex(new Dollar(dollarObj)));
+                if (hashTable.getIndex(new Dollar(dollarObj)) != -1) {
+                    System.out.println(hashTable.getIndex(new Dollar(dollarObj)));
+                }else {
+                    System.out.println("Dollar amount not found.");
+                }
                 break;
             
             case 2:

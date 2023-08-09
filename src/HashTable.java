@@ -57,6 +57,7 @@ public class HashTable {
         while (hashTable[index] != null) {
             if (hashTable[index].isEqual(dollar)) {
                 return index;
+            }else {
             }
 
             count ++;
@@ -83,7 +84,7 @@ public class HashTable {
     }
     
     public double getLoadFactor() {
-    	return currentSize/29;
+    	return (double) currentSize /29;
     }
 
 }
