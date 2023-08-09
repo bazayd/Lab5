@@ -7,10 +7,14 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+<<<<<<< HEAD
+        Dollar[] dollars = {
+=======
         HashFunction hashTable = new HashFunction(29);
         Scanner scanner = new Scanner(System.in);
         
         Currency[] currencies = {
+>>>>>>> 1bc1289290674830f24915aa3f09bd326422c096
                 new Dollar(57.12),
                 new Dollar(23.44),
                 new Dollar(87.43),
@@ -32,6 +36,9 @@ public class Main {
                 new Dollar(251.00),
                 new Dollar(151.00)
         };
+<<<<<<< HEAD
+
+=======
         
         //add all elements into the 
 //        for (int i = 0; i < currencies.length; i++) {
@@ -67,6 +74,16 @@ public class Main {
         	
         	}
         }
+>>>>>>> 1bc1289290674830f24915aa3f09bd326422c096
+
+        HashTable hashTable = new HashTable(29);
+
+
+        for (Dollar dollar: dollars) {
+            hashTable.hashInsert(dollar);
+        }
+
+        hashTable.printHashTable();
 
     }
 }
