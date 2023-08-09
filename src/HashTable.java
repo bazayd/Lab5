@@ -1,3 +1,14 @@
+/*
+ * Authors: Nicholas Kang, Brandon Arriaga
+ * Group 10 JAVA
+ *
+ * Lab 5
+ *
+ * Purpose: Creates a Hash Table of type Dollar that inserts dollar objects based off a specific Hash Scheme.
+ * Hash table also allows for index searching to find dollar objects.
+ *
+ */
+
 public class HashTable {
 
     private Dollar[] hashTable;
@@ -57,13 +68,12 @@ public class HashTable {
         while (hashTable[index] != null) {
             if (hashTable[index].isEqual(dollar)) {
                 return index;
-            }else {
             }
 
             count ++;
             index = (ogIndex + count* count) % totalBuckets;
         }
-        System.out.println("Invalid Data");
+
         return -1;
     }
 
