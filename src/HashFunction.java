@@ -38,15 +38,15 @@ public class HashFunction extends Dollar {
     }
     
     
-    public Currency HashSearch(int key) {
-    	int arrayKey = key % 29;
+    public int HashSearch(int key) {
+    	int arrayKey = (key) % 29;
     	
     	while(hashArray[arrayKey] != null) {
     		
     		if (hashArray[arrayKey].getKey() == key) {
     			
     			System.out.println("Found key at: " + arrayKey);
-    			return hashArray[arrayKey].getValue();
+    			return arrayKey;
     			
     		}
     			
@@ -55,8 +55,8 @@ public class HashFunction extends Dollar {
     			
     	}
     	
-    	System.out.println("Did not find key");
-    	return null;
+    	System.out.println("Invalid Data");
+    	return -1;
 
     }
     
