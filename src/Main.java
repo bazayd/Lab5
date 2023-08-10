@@ -1,6 +1,16 @@
 
 import java.util.Scanner;
 
+/*
+ * Authors: Nicholas Kang, Brandon Arriaga
+ * Group 10 JAVA
+ *
+ * Lab 5
+ *
+ * Purpose: Creates Array of Dollar objects and inserts into the Hash Table, where then the user is prompted to
+ * search for a dollar amount or to end the program.
+ *
+ */
 public class Main {
     public static void main(String[] args) {
 
@@ -36,7 +46,7 @@ public class Main {
         	hashTable.hashInsert(currencies[i]);
         }
         
-        hashTable.printHashTable();
+
         System.out.println("Number of Data Uploaded: ");
         System.out.println(hashTable.getCurrentSize());
         System.out.println("Load Factor: ");
@@ -70,10 +80,10 @@ public class Main {
             
             case 2:
             	end = true;
-        	
-        	
         	}
         }
+        System.out.println("Exiting Program...");
+
 
 
 

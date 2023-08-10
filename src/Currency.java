@@ -4,7 +4,7 @@ import java.lang.Math;
  * Authors: Nicholas Kang, Brandon Arriaga
  * Group 10 JAVA
  *
- * Lab 4
+ * Lab 5
  *
  * Purpose: Creates currency object, checks for invalid currency inputs, adds and subtracts currencies,
  * checks for correct currency use and returns currency statement.
