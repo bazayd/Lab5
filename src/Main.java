@@ -76,7 +76,7 @@ public class Main {
                 if (hashTable.getIndex(new Dollar(dollarObj)) != -1) {
                     System.out.println("Dollar amount $" + dollarObj + " is at index " + hashTable.getIndex(new Dollar(dollarObj)));
                 }else {
-                    System.out.println("Dollar amount not found.");
+                    System.out.println("Invalid Data.");
                 }
                 break;
             
