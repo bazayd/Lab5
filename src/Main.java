@@ -47,6 +47,8 @@ public class Main {
         }
         
 
+        hashTable.printHashTable();
+        
         System.out.println("Number of Data Uploaded: ");
         System.out.println(hashTable.getCurrentSize());
         System.out.println("Load Factor: ");
@@ -55,7 +57,6 @@ public class Main {
         System.out.println(hashTable.getCollisions());
         System.out.println("");
         
-//        hashTable.printHashTable();
 
         boolean end = false;
         
