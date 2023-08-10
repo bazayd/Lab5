@@ -47,6 +47,7 @@ public class Main {
         }
         
 
+        System.out.println("Complete Hash Table: ");
         hashTable.printHashTable();
         
         System.out.println("Number of Data Uploaded: ");
@@ -69,11 +70,11 @@ public class Main {
         	
         	switch (result) {
             case 1:
-                System.out.println("Enter Dolalr Object to search for: ");
+                System.out.println("Enter Dollar Object to search for: ");
                 double dollarObj = scanner.nextDouble();
                 scanner.nextLine();
                 if (hashTable.getIndex(new Dollar(dollarObj)) != -1) {
-                    System.out.println(hashTable.getIndex(new Dollar(dollarObj)));
+                    System.out.println("Dollar amount $" + dollarObj + " is at index " + hashTable.getIndex(new Dollar(dollarObj)));
                 }else {
                     System.out.println("Dollar amount not found.");
                 }
