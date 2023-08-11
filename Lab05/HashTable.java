@@ -30,7 +30,8 @@ public class HashTable {
     /*
     *Pre: key value of type Dollar
     *
-    * Post: gets the whole and fractional value of key to get the total of the Hash Scheme
+    * Post: gets the whole and fractional value of key to get the total of the Hash Scheme which is used
+    * to insert dollar values
     *
     * Return: Integer result
      */
@@ -63,6 +64,7 @@ public class HashTable {
         while (hashTable[index] != null) {
 
             count++;
+            // Probing in order to find an empty slot
             index = (refIndex + count * count) % totalBuckets;
 
         }

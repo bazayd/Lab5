@@ -11,7 +11,7 @@ import java.util.Scanner;
  * search for a dollar amount or to end the program.
  *
  */
-public class Main {
+public class Lab05Main {
     public static void main(String[] args) {
 
         HashTable hashTable = new HashTable(29);
